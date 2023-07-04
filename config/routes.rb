@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :groups
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: "transactions#index"
+  root to: "home#index"
+
+  get "/home", to: "home#index"
 end

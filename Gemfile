@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # devise setup for authentication
 gem 'devise'
+
+# bootstrap setup for styling
+gem 'bootstrap'
