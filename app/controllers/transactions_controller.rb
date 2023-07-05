@@ -1,46 +1,42 @@
 class TransactionsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_transaction, only: %i[show edit update destroy]
+  load_and_authorize_resource
 
   def index
     @transactions = current_user.transactions
   end
-
-  def show; end
 
   def new
     @transaction = Transaction.new
   end
 
   def create
-    @transaction = current_user.transactions.build(transaction_params)
-    if @transaction.save
-      redirect_to @transaction, notice: 'Transaction was successfully created.'
-    else
-      render :new
-    end
-  end
+    @transaction = Transaction.new(transaction_params)
+    @transaction.author = current_user
 
-  def edit; end
+    # Assign the first non-blank group_id to the transaction
+    @transaction.group_id = params[:transaction][:group_ids].reject(&:blank?).first
 
-  def update
-    if @transaction.update(transaction_params)
-      redirect_to @transaction, notice: 'Transaction was successfully updated.'
-    else
-      render :edit
+    respond_to do |format|
+      if @transaction.save
+        if @transaction.group_id.present?
+          format.html { redirect_to Group.find(@transaction.group_id), notice: 'Transaction was successfully created.' }
+        else
+          format.html do
+            redirect_to @transaction, notice: 'Transaction was successfully created, but no group was assigned.'
+          end
+        end
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
     end
   end
 
   def destroy
     @transaction.destroy
-    redirect_to transactions_url, notice: 'Transaction was successfully destroyed.'
+    redirect_to group_path, notice: 'Transaction was successfully destroyed.'
   end
 
   private
-
-  def set_transaction
-    @transaction = current_user.transactions.find(params[:id])
-  end
 
   def transaction_params
     params.require(:transaction).permit(:name, :amount, group_ids: [])

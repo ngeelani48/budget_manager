@@ -6,7 +6,10 @@ class GroupsController < ApplicationController
     @groups = current_user.groups
   end
 
-  def show; end
+  def show
+    @transactions = @group.transactions.order(created_at: :desc)
+    @total_amount = @group.transactions.sum(:amount)
+  end
 
   def new
     @group = Group.new
@@ -14,8 +17,10 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.build(group_params)
+    @group.image.attach(params[:group][:image]) # Attach the image using Active Storage
+
     if @group.save
-      redirect_to @group, notice: 'Group was successfully created.'
+      redirect_to group_path(@group), notice: 'Group was successfully created.'
     else
       render :new
     end
@@ -25,13 +30,14 @@ class GroupsController < ApplicationController
 
   def update
     if @group.update(group_params)
-      redirect_to @group, notice: 'Group was successfully updated.'
+      redirect_to group_path(@group), notice: 'Group was successfully updated.'
     else
       render :edit
     end
   end
 
   def destroy
+    @group.transactions.destroy_all
     @group.destroy
     redirect_to groups_url, notice: 'Group was successfully destroyed.'
   end
