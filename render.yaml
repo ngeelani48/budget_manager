@@ -1,7 +1,7 @@
 databases:
   - name: Nafees
-    databaseName: nafees
-    user: nafees_user
+    databaseName: nafees_92xr
+    user: nafees_92xr_user
 
 services:
   - type: web
