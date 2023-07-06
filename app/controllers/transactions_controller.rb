@@ -12,8 +12,6 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Transaction.new(transaction_params)
     @transaction.author = current_user
-
-    # Assign the first non-blank group_id to the transaction
     @transaction.group_id = params[:transaction][:group_ids].reject(&:blank?).first
 
     respond_to do |format|

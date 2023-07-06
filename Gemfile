@@ -82,3 +82,14 @@ gem 'bootstrap'
 
 # using cancancan
 gem 'cancancan'
+
+# Gems for testing
+group :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'minitest'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
+
+gem 'rails-controller-testing'
