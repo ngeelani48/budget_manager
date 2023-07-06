@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
     @group.image.attach(params[:group][:image]) # Attach the image using Active Storage
 
     if @group.save
-      redirect_to group_path(@group), notice: 'Group was successfully created.'
+      redirect_to groups_path, notice: 'Group was successfully created.'
     else
       render :new
     end
