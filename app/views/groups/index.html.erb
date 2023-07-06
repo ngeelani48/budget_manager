@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col">
             <% if group.image.attached? %>
-              <%= image_tag group.image, class: 'img-thumbnail', style: 'max-width: 200px; max-height: 200px;' %>
+              <%= image_tag group.image, class: 'img-thumbnail', style: 'max-width: 130px; max-height: 130px;' %>
             <% else %>
               <%= image_tag 'placeholder-image.png', class: 'img-thumbnail', style: 'max-width: 200px; max-height: 200px;' %>
             <% end %>
@@ -34,7 +34,7 @@
   <% end %>
 </div>
 <footer class="footer" style="padding: 0.5rem; max-width: 700px; margin: 0rem auto;">
-  <div class="d-grid gap-2">
-    <%= link_to "Add a new category", new_group_path, class: "btn btn-success border-radius-none" %>
+  <div class="d-grid gap-2 mx-auto">
+    <%= link_to "Add a new category", new_group_path, class: "btn green-custom border-radius-none" %>
   </div>
 </footer>

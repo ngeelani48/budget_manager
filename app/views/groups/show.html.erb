@@ -5,8 +5,8 @@
 		<p class="fw-bold">$<%= @group.total_amount.round(2) %></p>
   </div>
   <div class="p-4 pt-0">
-    <%= image_tag @group.image, class: 'img-thumbnail', style: 'max-width: 200px; max-height: 200px;' %>
-    <p class="text-muted text-end pt-2"><%= @group.name %></p>
+    <%= image_tag @group.image, class: 'img-thumbnail', style: 'max-width: 150px; max-height: 150px;' %>
+    <p class="text-muted text-end" style= "margin-top: -2rem;"><%= @group.name %></p>
   </div>
 </div>
   <div class="divider mb-2"></div>
@@ -15,6 +15,6 @@
 
 <footer class="footer" style= "padding: 0.5rem; max-width: 700px; margin: 0rem auto;">
   <div class="d-grid gap-2">
-    <%= link_to "Add new transaction", new_transaction_path, class: "btn btn-success border-radius-none" %>
+    <%= link_to "Add new transaction", new_transaction_path, class: "btn green-custom border-radius-none" %>
   </div>
 </footer>
