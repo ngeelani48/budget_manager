@@ -6,7 +6,7 @@
   <br/>
 
   <h2><b>Budget Manager</b></h2>
-
+<br>
 </div>
 
 # 📗 Table of Contents
@@ -16,6 +16,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -32,7 +33,7 @@
 
 # 📖 Budget Manager <a name="about-project"></a>
 
-> The Budget Manager a mobile web application where user can manage his/her budget: user have a list of transactions associated with a category, so that user can see how much money he/she spent and on what.
+The Budget Manager a mobile web application where user can manage his/her budget: user have a list of transactions associated with a category, so that user can see how much money he/she spent and on what.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -55,6 +56,10 @@
 
 - **User can see how much money spent and on what**
 
+## Live Demo
+
+- [Live Demo](https://budget-manager-my4q.onrender.com/)
+- [Project video Link](https://www.loom.com/share/27742abcd57347fbbc91e983a14990f1?sid=45322c11-86ad-4a4e-bc8b-ecb3a87eb581)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +148,8 @@ Leave a star if you like the project.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the project.
+I would like to thank Microverse for the project. And design credits goes to:
+[@Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) - author of design
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
