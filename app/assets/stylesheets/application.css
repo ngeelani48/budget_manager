@@ -1,0 +1,26 @@
+.blue-custom {
+  background-color: #3778c2;
+}
+
+.text-custom {
+  color: #434b54;
+}
+
+.main-title {
+  margin-top: 50%;
+}
+
+.green-custom {
+  background-color: #5fb523;
+  color: white;
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 100vh;
+}

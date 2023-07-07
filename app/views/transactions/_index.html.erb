@@ -1,0 +1,14 @@
+<div class="container" style= "padding: 0.5rem; max-width: 700px; margin: 0rem auto;">
+  <% @transactions.each do |transaction| %>
+    <div class="container card mb-4">
+      <div class="p-4">
+        <div class="d-flex justify-content-between flex-row">
+          <h5><%= transaction.name %></h5>
+          <small>$<%= transaction.amount.round(2) %></small>
+          <%= button_to "Delete", transaction_path(transaction), method: :delete, class: "btn btn-danger btn-sm", data: { disable_with: "Deleting..." }, remote: true %>
+        </div>
+        <small class="text-muted"><%= transaction.created_at.strftime("%d %b %Y") %></small>
+      </div>
+    </div>
+  <% end %>
+</div>

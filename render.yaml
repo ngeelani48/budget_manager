@@ -1,0 +1,18 @@
+databases:
+  - name: Nafees
+    databaseName: nafees_92xr
+    user: nafees_92xr_user
+
+services:
+  - type: web
+    name: budget-manager
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Nafees
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
