@@ -33,7 +33,7 @@
 
 # 📖 Budget Manager <a name="about-project"></a>
 
-The Budget Manager a mobile web application where user can manage his/her budget: user have a list of transactions associated with a category, so that user can see how much money he/she spent and on what.
+The Budget Manager is a mobile web application where users can manage his/her budgets: Users have a list of transactions associated with a category to see how much money he/she spent and on what.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -69,13 +69,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+To run this project you need:
 
 - Code Editor (Vs Code)
 
 - Terminal
 
-- Install ruby on your computer
+- Install Ruby on your computer
 
 - Install rails on your computer
 
@@ -109,7 +109,7 @@ rails server
 ### Test
 
 ```sh
-  rspec
+  RSpec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -148,7 +148,7 @@ Leave a star if you like the project.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the project. And design credits goes to:
+I would like to thank Microverse for the project. And design credits go to:
 [@Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) - author of design
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
